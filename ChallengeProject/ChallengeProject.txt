@@ -1,0 +1,1 @@
+Debug/WeatherProgram.c.o Debug/test.c.o Debug/PrimeNumber.c.o

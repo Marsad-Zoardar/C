@@ -1,0 +1,1 @@
+Debug/main.c.o Debug/whileDo.c.o Debug/guessTheNumber.c.o Debug/GuessSolution.c.o
