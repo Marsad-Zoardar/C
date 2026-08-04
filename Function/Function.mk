@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=vboxuser
-Date                   :=03/08/26
+Date                   :=04/08/26
 CodeLitePath           :=/home/vboxuser/.codelite
 LinkerName             :=/bin/g++-13
 SharedObjectLinkerName :=/bin/g++-13 -shared -fPIC
@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/function.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/function.c$(ObjectSuffix) $(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) 
 
 
 
@@ -92,17 +92,23 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/main.c$(ObjectSuffix): main.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
+
 $(IntermediateDirectory)/function.c$(ObjectSuffix): function.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/function.c$(ObjectSuffix) -MF$(IntermediateDirectory)/function.c$(DependSuffix) -MM function.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/function.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/function.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/function.c$(PreprocessSuffix): function.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/function.c$(PreprocessSuffix) function.c
 
-$(IntermediateDirectory)/main.c$(ObjectSuffix): main.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
-	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
+$(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix): Para_Arguments.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) -MF$(IntermediateDirectory)/Para_Arguments.c$(DependSuffix) -MM Para_Arguments.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/Para_Arguments.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Para_Arguments.c$(PreprocessSuffix): Para_Arguments.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Para_Arguments.c$(PreprocessSuffix) Para_Arguments.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

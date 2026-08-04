@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=vboxuser
-Date                   :=02/08/26
+Date                   :=04/08/26
 CodeLitePath           :=/home/vboxuser/.codelite
 LinkerName             :=/bin/g++-13
 SharedObjectLinkerName :=/bin/g++-13 -shared -fPIC
@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) 
 
 
 
@@ -92,11 +92,11 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix): WeatherProgram.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) -MF$(IntermediateDirectory)/WeatherProgram.c$(DependSuffix) -MM WeatherProgram.c
-	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/WeatherProgram.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/WeatherProgram.c$(PreprocessSuffix): WeatherProgram.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/WeatherProgram.c$(PreprocessSuffix) WeatherProgram.c
+$(IntermediateDirectory)/Function.c$(ObjectSuffix): Function.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Function.c$(ObjectSuffix) -MF$(IntermediateDirectory)/Function.c$(DependSuffix) -MM Function.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/Function.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Function.c$(PreprocessSuffix): Function.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Function.c$(PreprocessSuffix) Function.c
 
 $(IntermediateDirectory)/test.c$(ObjectSuffix): test.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/test.c$(ObjectSuffix) -MF$(IntermediateDirectory)/test.c$(DependSuffix) -MM test.c
@@ -109,6 +109,12 @@ $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix): PrimeNumber.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/PrimeNumber.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/PrimeNumber.c$(PreprocessSuffix): PrimeNumber.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PrimeNumber.c$(PreprocessSuffix) PrimeNumber.c
+
+$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix): WeatherProgram.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) -MF$(IntermediateDirectory)/WeatherProgram.c$(DependSuffix) -MM WeatherProgram.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/WeatherProgram.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/WeatherProgram.c$(PreprocessSuffix): WeatherProgram.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/WeatherProgram.c$(PreprocessSuffix) WeatherProgram.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

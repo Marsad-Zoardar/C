@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="Para_Arguments.c"/>
     <File Name="function.c"/>
     <File Name="main.c"/>
   </VirtualDirectory>

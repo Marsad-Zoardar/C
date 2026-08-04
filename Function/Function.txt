@@ -1,1 +1,1 @@
-Debug/function.c.o Debug/main.c.o
+Debug/main.c.o Debug/function.c.o Debug/Para_Arguments.c.o

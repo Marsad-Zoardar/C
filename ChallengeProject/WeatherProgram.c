@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
+/*
 #define MONTHS 12
 #define YEARS 5
 
@@ -48,4 +48,4 @@ int main(){
         printf("\n");
         return 0;
 }
-   
+*/   
