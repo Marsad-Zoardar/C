@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
-
+/*
 
 
 //This function returns the greatest common divisor of two numbers (own algorithm)
@@ -66,3 +66,5 @@ int main(){
     
     return 0;
 }
+
+*/

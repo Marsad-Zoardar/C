@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) 
 
 
 
@@ -92,6 +92,12 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix): TicTacToe.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) -MF$(IntermediateDirectory)/TicTacToe.c$(DependSuffix) -MM TicTacToe.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/TicTacToe.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix): TicTacToe.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix) TicTacToe.c
+
 $(IntermediateDirectory)/Function.c$(ObjectSuffix): Function.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Function.c$(ObjectSuffix) -MF$(IntermediateDirectory)/Function.c$(DependSuffix) -MM Function.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/Function.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IncludePath)

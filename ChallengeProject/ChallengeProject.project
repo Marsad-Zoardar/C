@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="TicTacToe.c"/>
     <File Name="Function.c"/>
     <File Name="WeatherProgram.c"/>
     <File Name="PrimeNumber.c"/>
