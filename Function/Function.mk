@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/function.c$(ObjectSuffix) $(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/function.c$(ObjectSuffix) $(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) 
 
 
 
@@ -92,6 +92,12 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix): FunctionSolution.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FunctionSolution.c$(DependSuffix) -MM FunctionSolution.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/FunctionSolution.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FunctionSolution.c$(PreprocessSuffix): FunctionSolution.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FunctionSolution.c$(PreprocessSuffix) FunctionSolution.c
+
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
