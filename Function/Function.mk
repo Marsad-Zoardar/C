@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=vboxuser
-Date                   :=04/08/26
+Date                   :=06/08/26
 CodeLitePath           :=/home/vboxuser/.codelite
 LinkerName             :=/bin/g++-13
 SharedObjectLinkerName :=/bin/g++-13 -shared -fPIC
@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/function.c$(ObjectSuffix) $(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/function.c$(ObjectSuffix) $(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) $(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) $(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) 
 
 
 
@@ -92,12 +92,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix): FunctionSolution.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FunctionSolution.c$(DependSuffix) -MM FunctionSolution.c
-	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/FunctionSolution.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/FunctionSolution.c$(PreprocessSuffix): FunctionSolution.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FunctionSolution.c$(PreprocessSuffix) FunctionSolution.c
-
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
@@ -115,6 +109,18 @@ $(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix): Para_Arguments.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/Para_Arguments.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Para_Arguments.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Para_Arguments.c$(PreprocessSuffix): Para_Arguments.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Para_Arguments.c$(PreprocessSuffix) Para_Arguments.c
+
+$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix): FunctionSolution.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FunctionSolution.c$(DependSuffix) -MM FunctionSolution.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/FunctionSolution.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FunctionSolution.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FunctionSolution.c$(PreprocessSuffix): FunctionSolution.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FunctionSolution.c$(PreprocessSuffix) FunctionSolution.c
+
+$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix): TicTacToe.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) -MF$(IntermediateDirectory)/TicTacToe.c$(DependSuffix) -MM TicTacToe.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/Function/TicTacToe.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix): TicTacToe.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix) TicTacToe.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

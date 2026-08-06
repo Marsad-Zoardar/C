@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="TicTacToe.c"/>
     <File Name="FunctionSolution.c"/>
     <File Name="Para_Arguments.c"/>
     <File Name="function.c"/>

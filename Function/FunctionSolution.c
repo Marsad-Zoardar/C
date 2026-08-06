@@ -11,6 +11,8 @@ int gcd(int u, int v);
 float absoluteValue(float x);
 float squareRoot(float x);
 
+/*
+
 int main(){
     
     int result = 0;
@@ -104,3 +106,5 @@ float squareRoot(float x){
     return returnValue;
     
 }
+
+*/
