@@ -52,7 +52,7 @@ int main(){
         printf("Player %d wi\n ", --player);
     }
     else{
-        printf("Draw");
+        printf("Draw\n");
     }
 
     return 0;
