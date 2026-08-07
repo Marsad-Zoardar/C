@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=vboxuser
-Date                   :=04/08/26
+Date                   :=07/08/26
 CodeLitePath           :=/home/vboxuser/.codelite
 LinkerName             :=/bin/g++-13
 SharedObjectLinkerName :=/bin/g++-13 -shared -fPIC
@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) 
 
 
 
@@ -92,24 +92,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix): TicTacToe.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) -MF$(IntermediateDirectory)/TicTacToe.c$(DependSuffix) -MM TicTacToe.c
-	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/TicTacToe.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix): TicTacToe.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix) TicTacToe.c
-
-$(IntermediateDirectory)/Function.c$(ObjectSuffix): Function.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Function.c$(ObjectSuffix) -MF$(IntermediateDirectory)/Function.c$(DependSuffix) -MM Function.c
-	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/Function.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Function.c$(PreprocessSuffix): Function.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Function.c$(PreprocessSuffix) Function.c
-
-$(IntermediateDirectory)/test.c$(ObjectSuffix): test.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/test.c$(ObjectSuffix) -MF$(IntermediateDirectory)/test.c$(DependSuffix) -MM test.c
-	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/test.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/test.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/test.c$(PreprocessSuffix): test.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/test.c$(PreprocessSuffix) test.c
-
 $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix): PrimeNumber.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) -MF$(IntermediateDirectory)/PrimeNumber.c$(DependSuffix) -MM PrimeNumber.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/PrimeNumber.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IncludePath)
@@ -121,6 +103,30 @@ $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix): WeatherProgram.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/WeatherProgram.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/WeatherProgram.c$(PreprocessSuffix): WeatherProgram.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/WeatherProgram.c$(PreprocessSuffix) WeatherProgram.c
+
+$(IntermediateDirectory)/test.c$(ObjectSuffix): test.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/test.c$(ObjectSuffix) -MF$(IntermediateDirectory)/test.c$(DependSuffix) -MM test.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/test.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/test.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/test.c$(PreprocessSuffix): test.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/test.c$(PreprocessSuffix) test.c
+
+$(IntermediateDirectory)/Function.c$(ObjectSuffix): Function.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Function.c$(ObjectSuffix) -MF$(IntermediateDirectory)/Function.c$(DependSuffix) -MM Function.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/Function.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Function.c$(PreprocessSuffix): Function.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Function.c$(PreprocessSuffix) Function.c
+
+$(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix): stringChallenge.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix) -MF$(IntermediateDirectory)/stringChallenge.c$(DependSuffix) -MM stringChallenge.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/stringChallenge.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/stringChallenge.c$(PreprocessSuffix): stringChallenge.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/stringChallenge.c$(PreprocessSuffix) stringChallenge.c
+
+$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix): TicTacToe.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) -MF$(IntermediateDirectory)/TicTacToe.c$(DependSuffix) -MM TicTacToe.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/TicTacToe.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix): TicTacToe.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TicTacToe.c$(PreprocessSuffix) TicTacToe.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

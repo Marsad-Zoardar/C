@@ -10,7 +10,7 @@ void drawBoard();
 int checkForWin();
 int markBoard();
 
-
+/*
 int main(){
     
     //char grid[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -65,3 +65,4 @@ void drawBoard(){
     }
 }
 
+*/
