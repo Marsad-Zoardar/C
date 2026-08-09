@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-
+/*
 int stringLength(const char string[]);
 void concat(char result[], const char str1[], const char str2[]);
 bool equalStrings(const char s1[], const char s2[]);
@@ -33,11 +33,11 @@ int main(){
     return 0;
 }
 
-/***********************************
+**********************************
  * This Function takes a constant string
  * and returns the length of the string
  * ********************************/
-
+/*
 int stringLength(const char string[]){
     
     unsigned int count = 0;
@@ -48,11 +48,12 @@ int stringLength(const char string[]){
     
     return count;
 }
-
+*/
 /******************************************
  * This functions takes 3 arguments and concatinates
  * the given constant strings
  * ****************************************/
+/*
 void concat(char result[], const char str1[], const char str2[]){
     
     int i, j;
@@ -66,13 +67,13 @@ void concat(char result[], const char str1[], const char str2[]){
     
     result[i + j] = '\0';
 }
-
+*/
 
 /****************************************
 This function compares two strings to see
 if they are equal
 ****************************************/
-
+/*
 bool equalStrings(const char s1[], const char s2[]){
     
     //int i = 0; //This variable was created to be used in the while loop, i didn't use it
@@ -96,3 +97,5 @@ bool equalStrings(const char s1[], const char s2[]){
     
     return isEqual;
 }
+
+*/

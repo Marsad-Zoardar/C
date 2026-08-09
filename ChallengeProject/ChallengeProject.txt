@@ -1,1 +1,1 @@
-Debug/PrimeNumber.c.o Debug/WeatherProgram.c.o Debug/test.c.o Debug/Function.c.o Debug/stringChallenge.c.o Debug/TicTacToe.c.o
+Debug/PrimeNumber.c.o Debug/WeatherProgram.c.o Debug/test.c.o Debug/Function.c.o Debug/TicTacToe.c.o Debug/stringChallenge.c.o Debug/strlnStrcpy.c.o
