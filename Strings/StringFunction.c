@@ -9,10 +9,10 @@
 //strcpy() ==> We cannot assign arrays or string in C. We use strcpy function to copy a string to an array (takes two arguments)
 //strncpy() ==> Safer way to copy a string. You need to specify the number of characters you want to copy. (takes 3 arguments)
 //strcat() ==> Concatinates two strings. (takes 2 arguments)
-
+/*
 int main(){
     
-    /*char myString[] = "My string is longer than temp";
+    char myString[] = "My string is longer than temp";
     char temp[50];
 
     strncpy(temp, myString, sizeof(temp) - 1);
@@ -54,7 +54,6 @@ int main(){
     
     printf("Final destination string : |%s| \n", dest);
     
-*/
     printf("strcmp(\"A\", \"A\") is\t" );
     printf("%d\n", strcmp("A", "A"));
     
@@ -77,3 +76,4 @@ int main(){
     
 }
 
+*/
