@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int square(int *x);
 
 int main(int argc, char **argv)
 {
@@ -29,5 +30,48 @@ int main(int argc, char **argv)
     
     printf("num1 = %ld num2 = %ld *pnum = %ld *pnum+num2 = %ld\n", num1, num2, *pnum, *pnum+num2);
     
+    
+    ////////////////////////////////Const Modifier///////////////////////////////////////
+    
+    //long value = 9999L;
+    //const long *pointer = &value; //The value becomes a constant
+    
+    //int count = 43;
+    //int *const newPointer = &count; //The pointer becomes a constant
+    /////////////////////////////////////////////////////////////////////////////////////
+    
+    ////////////////////////////////void*////////////////////////////////////////////////
+    
+    int i = 10;
+    float f = 2.34;
+    char ch = 'k';
+    
+    void *vptr;
+    
+    vptr = &i;
+    printf("Value of i = %d\n", *(int*)vptr);
+    
+    vptr = &f;
+    printf("Value of f = %0.2f\n", *(float*)vptr);
+    
+    vptr = &ch;
+    printf("Value of ch = %c\n", *(char*)vptr);
+    
+    
+    int w = 99;
+    
+    //square(&w);
+    
+    printf("The square of the given number is: %d\n", square(&w));
+    
+    
 	return 0;
+}
+
+
+int square(int *x){
+    
+    int i = (*x)*(*x);
+    
+    return i;
 }
