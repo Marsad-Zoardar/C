@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=vboxuser
-Date                   :=09/08/26
+Date                   :=13/08/26
 CodeLitePath           :=/home/vboxuser/.codelite
 LinkerName             :=/bin/g++-13
 SharedObjectLinkerName :=/bin/g++-13 -shared -fPIC
@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/strlnStrcpy.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/PointersChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/strlnStrcpy.c$(ObjectSuffix) 
 
 
 
@@ -92,6 +92,12 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/PointersChallenge.c$(ObjectSuffix): PointersChallenge.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/PointersChallenge.c$(ObjectSuffix) -MF$(IntermediateDirectory)/PointersChallenge.c$(DependSuffix) -MM PointersChallenge.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/PointersChallenge.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PointersChallenge.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/PointersChallenge.c$(PreprocessSuffix): PointersChallenge.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PointersChallenge.c$(PreprocessSuffix) PointersChallenge.c
+
 $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix): PrimeNumber.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) -MF$(IntermediateDirectory)/PrimeNumber.c$(DependSuffix) -MM PrimeNumber.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/PrimeNumber.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IncludePath)
