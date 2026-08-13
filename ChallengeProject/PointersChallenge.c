@@ -16,52 +16,52 @@
 #include <stdlib.h>
 
 //My function
-int strLength(const char *pointer);
+//int strLength(const char *pointer);
 //Jason's function
-int stringLength(const char *string);
-
-int main(){
-    
-    char myString[] = "My name is Marsad"; //My variable
-    
-    printf("The length of the string is: %i\n", strLength(myString));//My output
-    printf("The length of the string is: %i\n", strLength("My name is Marsad and I live in Jhenaidah"));//My output
-    ///////////////////////////////////////////////////////////
-    
-    printf("The length of the string is: %d\n", stringLength("stringLength test"));
-    printf("The length of the string is: %d\n", stringLength(""));
-    printf("The length of the string is: %d\n", stringLength("Jason"));
-    
-    return 0;
-}
-
+//int stringLength(const char *string);
+//
+//int main(){
+//    
+//    char myString[] = "My name is Marsad"; My variable
+//    
+//    printf("The length of the string is: %i\n", strLength(myString));My output
+//    printf("The length of the string is: %i\n", strLength("My name is Marsad and I live in Jhenaidah"));My output
+//    /////////////////////////////////////////////////////////
+//    
+//    printf("The length of the string is: %d\n", stringLength("stringLength test"));
+//    printf("The length of the string is: %d\n", stringLength(""));
+//    printf("The length of the string is: %d\n", stringLength("Jason"));
+//    
+//    return 0;
+//}
+//
 //My algorithm
-
-int strLength(const char *pointer){
-    
-    int count = 0;
-    
-    while(*pointer){ //When the pointer = '\0', it exits the loop
-        
-        ++pointer;
-        //*pointer++; This position and post increment yields the same output, except there is a warning
-        count += 1;
-        //*++pointer; This position and pre increment yields the same output, except there is a warning
-        //*pointer++; This position and post increment yields the same output, except there is a warning
-    }
-    
-    return count;
-}
-
+//
+//int strLength(const char *pointer){
+//    
+//    int count = 0;
+//    
+//    while(*pointer){ When the pointer = '\0', it exits the loop
+//        
+//        ++pointer;
+//        *pointer++; This position and post increment yields the same output, except there is a warning
+//        count += 1;
+//        *++pointer; This position and pre increment yields the same output, except there is a warning
+//        *pointer++; This position and post increment yields the same output, except there is a warning
+//    }
+//    
+//    return count;
+//}
+//
 //Jason's solution
-int stringLength(const char *string){
-    const char *lastAddress = string;
-    
-    while(*lastAddress){ //or while(*lastAddress != '\0')
-        ++lastAddress;
-    }
-    
-    return lastAddress - string;
-}
-
-
+//int stringLength(const char *string){
+//    const char *lastAddress = string;
+//    
+//    while(*lastAddress){ or while(*lastAddress != '\0')
+//        ++lastAddress;
+//    }
+//    
+//    return lastAddress - string;
+//}
+//
+//

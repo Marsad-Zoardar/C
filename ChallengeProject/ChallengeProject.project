@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="UsingDynamicMemory.c"/>
     <File Name="PointersChallenge.c"/>
     <File Name="strlnStrcpy.c"/>
     <File Name="stringChallenge.c"/>

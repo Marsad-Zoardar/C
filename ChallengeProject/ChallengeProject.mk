@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/PointersChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/strlnStrcpy.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/PointersChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IntermediateDirectory)/UsingDynamicMemory.c$(ObjectSuffix) $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) $(IntermediateDirectory)/test.c$(ObjectSuffix) $(IntermediateDirectory)/Function.c$(ObjectSuffix) $(IntermediateDirectory)/TicTacToe.c$(ObjectSuffix) $(IntermediateDirectory)/stringChallenge.c$(ObjectSuffix) $(IntermediateDirectory)/strlnStrcpy.c$(ObjectSuffix) 
 
 
 
@@ -103,6 +103,12 @@ $(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix): PrimeNumber.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/PrimeNumber.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PrimeNumber.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/PrimeNumber.c$(PreprocessSuffix): PrimeNumber.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PrimeNumber.c$(PreprocessSuffix) PrimeNumber.c
+
+$(IntermediateDirectory)/UsingDynamicMemory.c$(ObjectSuffix): UsingDynamicMemory.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/UsingDynamicMemory.c$(ObjectSuffix) -MF$(IntermediateDirectory)/UsingDynamicMemory.c$(DependSuffix) -MM UsingDynamicMemory.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/ChallengeProject/UsingDynamicMemory.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/UsingDynamicMemory.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/UsingDynamicMemory.c$(PreprocessSuffix): UsingDynamicMemory.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/UsingDynamicMemory.c$(PreprocessSuffix) UsingDynamicMemory.c
 
 $(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix): WeatherProgram.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/WeatherProgram.c$(ObjectSuffix) -MF$(IntermediateDirectory)/WeatherProgram.c$(DependSuffix) -MM WeatherProgram.c
