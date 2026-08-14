@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="Quiz4" Version="11000" InternalType="User templates">
+<CodeLite_Project Name="Structures" Version="11000" InternalType="User templates">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="StructChallenge.c"/>
     <File Name="main.c"/>
   </VirtualDirectory>
   <Settings Type="Executable">
@@ -95,6 +101,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
 </CodeLite_Project>
