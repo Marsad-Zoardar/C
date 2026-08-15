@@ -8,8 +8,11 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="FileChallenge2Jason.c"/>
+    <File Name="FileChallenge.c"/>
+    <File Name="FileChallenge2.c"/>
+    <File Name="Write.c"/>
     <File Name="challenge.txt"/>
-    <File Name="ChallengeFile.c"/>
     <File Name="myText.txt"/>
     <File Name="main.c"/>
   </VirtualDirectory>

@@ -1,10 +1,4 @@
-Bare metal development is 
-the process of writing software 
-that runs directly on target 
-hardware without an operating system, 
-middleware, or abstraction layers.
-Developers manage hardware resources manually
-using register-level programming,
-utilizing bitwise operations and 
-pointers to control peripherals 
-like GPIO, timers, and communication interfaces.
+SO, IN THIS PROGRAM WHAT
+WE ARE LEARNING IS HOW TO OPEN A FILE,
+READ IT, AND CHANGE ALL THE LOWERCASE TO 
+UPPERCASE

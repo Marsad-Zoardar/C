@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/ChallengeFile.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/Write.c$(ObjectSuffix) $(IntermediateDirectory)/FileChallenge2.c$(ObjectSuffix) $(IntermediateDirectory)/FileChallenge.c$(ObjectSuffix) 
 
 
 
@@ -92,17 +92,35 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/ChallengeFile.c$(ObjectSuffix): ChallengeFile.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/ChallengeFile.c$(ObjectSuffix) -MF$(IntermediateDirectory)/ChallengeFile.c$(DependSuffix) -MM ChallengeFile.c
-	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/ChallengeFile.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/ChallengeFile.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/ChallengeFile.c$(PreprocessSuffix): ChallengeFile.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/ChallengeFile.c$(PreprocessSuffix) ChallengeFile.c
+$(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix): FileChallenge2Jason.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FileChallenge2Jason.c$(DependSuffix) -MM FileChallenge2Jason.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/FileChallenge2Jason.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FileChallenge2Jason.c$(PreprocessSuffix): FileChallenge2Jason.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FileChallenge2Jason.c$(PreprocessSuffix) FileChallenge2Jason.c
 
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
+
+$(IntermediateDirectory)/Write.c$(ObjectSuffix): Write.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Write.c$(ObjectSuffix) -MF$(IntermediateDirectory)/Write.c$(DependSuffix) -MM Write.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/Write.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Write.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Write.c$(PreprocessSuffix): Write.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Write.c$(PreprocessSuffix) Write.c
+
+$(IntermediateDirectory)/FileChallenge2.c$(ObjectSuffix): FileChallenge2.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FileChallenge2.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FileChallenge2.c$(DependSuffix) -MM FileChallenge2.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/FileChallenge2.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FileChallenge2.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FileChallenge2.c$(PreprocessSuffix): FileChallenge2.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FileChallenge2.c$(PreprocessSuffix) FileChallenge2.c
+
+$(IntermediateDirectory)/FileChallenge.c$(ObjectSuffix): FileChallenge.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FileChallenge.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FileChallenge.c$(DependSuffix) -MM FileChallenge.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/FileChallenge.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FileChallenge.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FileChallenge.c$(PreprocessSuffix): FileChallenge.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FileChallenge.c$(PreprocessSuffix) FileChallenge.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
