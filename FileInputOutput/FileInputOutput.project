@@ -8,6 +8,9 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="challenge3.txt"/>
+    <File Name="FileChallenge3.c"/>
+    <File Name="FindingPosition.c"/>
     <File Name="FileChallenge2Jason.c"/>
     <File Name="FileChallenge.c"/>
     <File Name="FileChallenge2.c"/>

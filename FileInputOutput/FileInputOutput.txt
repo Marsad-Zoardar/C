@@ -1,1 +1,1 @@
-Debug/FileChallenge2Jason.c.o Debug/main.c.o Debug/Write.c.o Debug/FileChallenge2.c.o Debug/FileChallenge.c.o
+Debug/FileChallenge3.c.o Debug/FindingPosition.c.o Debug/FileChallenge2Jason.c.o Debug/main.c.o Debug/Write.c.o Debug/FileChallenge2.c.o Debug/FileChallenge.c.o

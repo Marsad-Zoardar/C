@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=vboxuser
-Date                   :=15/08/26
+Date                   :=16/08/26
 CodeLitePath           :=/home/vboxuser/.codelite
 LinkerName             :=/bin/g++-13
 SharedObjectLinkerName :=/bin/g++-13 -shared -fPIC
@@ -61,7 +61,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/Write.c$(ObjectSuffix) $(IntermediateDirectory)/FileChallenge2.c$(ObjectSuffix) $(IntermediateDirectory)/FileChallenge.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/FileChallenge3.c$(ObjectSuffix) $(IntermediateDirectory)/FindingPosition.c$(ObjectSuffix) $(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix) $(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/Write.c$(ObjectSuffix) $(IntermediateDirectory)/FileChallenge2.c$(ObjectSuffix) $(IntermediateDirectory)/FileChallenge.c$(ObjectSuffix) 
 
 
 
@@ -92,6 +92,18 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/FileChallenge3.c$(ObjectSuffix): FileChallenge3.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FileChallenge3.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FileChallenge3.c$(DependSuffix) -MM FileChallenge3.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/FileChallenge3.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FileChallenge3.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FileChallenge3.c$(PreprocessSuffix): FileChallenge3.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FileChallenge3.c$(PreprocessSuffix) FileChallenge3.c
+
+$(IntermediateDirectory)/FindingPosition.c$(ObjectSuffix): FindingPosition.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FindingPosition.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FindingPosition.c$(DependSuffix) -MM FindingPosition.c
+	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/FindingPosition.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FindingPosition.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FindingPosition.c$(PreprocessSuffix): FindingPosition.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FindingPosition.c$(PreprocessSuffix) FindingPosition.c
+
 $(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix): FileChallenge2Jason.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix) -MF$(IntermediateDirectory)/FileChallenge2Jason.c$(DependSuffix) -MM FileChallenge2Jason.c
 	$(CC) $(SourceSwitch) "/home/vboxuser/Workspaces/Workspace2/FileInputOutput/FileChallenge2Jason.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FileChallenge2Jason.c$(ObjectSuffix) $(IncludePath)
